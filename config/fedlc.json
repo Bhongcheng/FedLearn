@@ -10,8 +10,8 @@
     },
     "train_setups":{
         "algo": {
-            "name": "fedavg",
-            "params": {}
+            "name": "fedlc",
+            "params": {"tau": 1}
         },
         "scenario": {
             "n_rounds": 200,
@@ -35,7 +35,7 @@
     },
     "wandb_setups":{
         "project": "baseline",
-        "group": "fedavg",
-        "name": "fedavg"
+        "group": "fedlc",
+        "name": "fedlc"
     }
 }
