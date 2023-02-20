@@ -37,7 +37,7 @@ class FedAvgNetCIFAR(torch.nn.Module):
         self.classifier = nn.Linear(512, num_classes)
         self.relu = nn.ReLU()
 
-    def forward(self, x):
+    def forward(self, x, return_feature = False):
         x = self.conv2d_1(x)
         x = self.relu(x)
         x = self.max_pooling(x)
@@ -47,4 +47,7 @@ class FedAvgNetCIFAR(torch.nn.Module):
         x = self.flatten(x)
         z = self.relu(self.linear_1(x))
         x = self.classifier(z)
-        return x
+        if return_feature:
+            return z, x
+        else:
+            return x

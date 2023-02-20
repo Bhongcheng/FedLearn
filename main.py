@@ -20,6 +20,7 @@ torch.set_printoptions(10)
 ALGO = {
     "fedavg": algorithms.fedavg.Server,
     "fedlc": algorithms.fedlc.Server,
+    "fedrs": algorithms.fedrs.Server,
 }
 
 SCHEDULER = {
@@ -98,7 +99,7 @@ def main(args):
 
 # Parser arguments for terminal execution
 parser = argparse.ArgumentParser(description="Process Configs")
-parser.add_argument("--config_path", default="./config/fedlc.json", type=str)
+parser.add_argument("--config_path", default="./config/fedrs.json", type=str)
 parser.add_argument("--dataset_name", type=str)
 parser.add_argument("--n_clients", type=int)
 parser.add_argument("--batch_size", type=int)
@@ -119,6 +120,7 @@ parser.add_argument("--group", type=str)
 parser.add_argument("--exp_name", type=str)
 args = parser.parse_args()
 
+args.partition_s = 2
 
 if __name__ == "__main__":
     # Load configuration from .json file
