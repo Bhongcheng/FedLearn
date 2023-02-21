@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), "../../")))
 
-from algorithms.fedrs.ClientTrainer import ClientTrainer
+from algorithms.fedntd.ClientTrainer import ClientTrainer
 from algorithms.BaseServer import BaseServer
 from algorithms.measures import *
 
@@ -28,4 +28,4 @@ class Server(BaseServer):
             device=self.device,
             num_classes=self.num_classes,
         )
-        print("\n>>> FedRS Server initialized...\n")
+        print("\n>>> FedNTD Server initialized...\n")

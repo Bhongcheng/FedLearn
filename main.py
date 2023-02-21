@@ -21,6 +21,7 @@ ALGO = {
     "fedavg": algorithms.fedavg.Server,
     "fedlc": algorithms.fedlc.Server,
     "fedrs": algorithms.fedrs.Server,
+    "fedntd": algorithms.fedntd.Server,
 }
 
 SCHEDULER = {
@@ -99,7 +100,7 @@ def main(args):
 
 # Parser arguments for terminal execution
 parser = argparse.ArgumentParser(description="Process Configs")
-parser.add_argument("--config_path", default="./config/fedrs.json", type=str)
+parser.add_argument("--config_path", default="./config/fedntd.json", type=str)
 parser.add_argument("--dataset_name", type=str)
 parser.add_argument("--n_clients", type=int)
 parser.add_argument("--batch_size", type=int)
