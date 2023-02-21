@@ -11,8 +11,8 @@
     },
     "train_setups":{
         "algo": {
-            "name": "fedavg",
-            "params": {}
+            "name": "fedprox",
+            "params": {"mu": 1.0}
         },
         "scenario": {
             "n_rounds": 200,
@@ -36,7 +36,7 @@
     },
     "wandb_setups":{
         "project": "baseline",
-        "group": "fedavg",
-        "name": "fedavg"
+        "group": "fedprox",
+        "name": "fedprox"
     }
 }
