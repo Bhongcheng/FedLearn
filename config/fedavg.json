@@ -5,8 +5,7 @@
         "batch_size": 50,
         "n_clients": 100,
         "partition": {
-            "method": "sharding",
-            "shard_per_user": 2
+            "method": "sharding"
         }
     },
     "train_setups":{
