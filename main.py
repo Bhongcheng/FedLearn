@@ -122,7 +122,6 @@ parser.add_argument("--group", type=str)
 parser.add_argument("--exp_name", type=str)
 args = parser.parse_args()
 
-args.partition_s = 2
 
 if __name__ == "__main__":
     # Load configuration from .json file
