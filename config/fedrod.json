@@ -10,8 +10,8 @@
     },
     "train_setups":{
         "algo": {
-            "name": "fedprox",
-            "params": {"mu": 1.0}
+            "name": "fedrod",
+            "params": {}
         },
         "scenario": {
             "n_rounds": 200,
@@ -35,7 +35,7 @@
     },
     "wandb_setups":{
         "project": "baseline",
-        "group": "fedprox",
-        "name": "fedprox"
+        "group": "fedrod",
+        "name": "fedrod"
     }
 }
