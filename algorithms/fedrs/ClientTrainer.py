@@ -54,7 +54,7 @@ class ClientTrainer(BaseClientTrainer):
 
                 # forward pass
                 data, targets = data.to(self.device), targets.to(self.device)
-                features, _ = self.model(data, return_feature = True)
+                features, _ = self.model(data, get_features = True)
                 w = self.model.classifier.weight
 
                 output = cdist * features.mm(w.transpose(0, 1))
