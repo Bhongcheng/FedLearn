@@ -22,7 +22,6 @@ def logit_calibrated_loss(labels_count, logits, labels, tau):
     )
     y_logit = torch.gather(cal_logit, dim=-1, index=labels.unsqueeze(1))
     loss = -torch.log(y_logit / cal_logit.sum(dim=-1, keepdim=True))
-    # loss = -torch.log(y_logit / (cal_logit.sum(dim=-1, keepdim=True) - y_logit))
 
     return loss.sum() / logits.shape[0]
 

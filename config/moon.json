@@ -11,7 +11,7 @@
     "train_setups":{
         "algo": {
             "name": "moon",
-            "params": {"mu": 0.1, "tau":0.5}
+            "params": {"mu": 1.0, "tau":0.5}
         },
         "scenario": {
             "n_rounds": 200,

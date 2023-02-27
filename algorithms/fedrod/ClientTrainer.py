@@ -33,7 +33,7 @@ class ClientTrainer(BaseClientTrainer):
         counter = Counter(targets)
 
         for class_idx, count in counter.items():
-            sample_per_class[class_idx] = count
+            sample_per_class[class_idx] = max(1, count)
 
         for _ in range(self.local_epochs):
             for data, targets in self.trainloader:
