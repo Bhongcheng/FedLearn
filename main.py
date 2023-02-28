@@ -26,6 +26,7 @@ ALGO = {
     "fedrod": algorithms.fedrod.Server,
     "moon": algorithms.moon.Server,
     "scaffold": algorithms.scaffold.Server,
+    "fedavgm": algorithms.fedavgm.Server,
 }
 
 SCHEDULER = {
@@ -104,7 +105,7 @@ def main(args):
 
 # Parser arguments for terminal execution
 parser = argparse.ArgumentParser(description="Process Configs")
-parser.add_argument("--config_path", default="./config/scaffold.json", type=str)
+parser.add_argument("--config_path", default="./config/fedavgm.json", type=str)
 parser.add_argument("--dataset_name", type=str)
 parser.add_argument("--n_clients", type=int)
 parser.add_argument("--batch_size", type=int)
