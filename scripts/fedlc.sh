@@ -1,12 +1,12 @@
 # sharding
 
-# python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 2
+python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 2
 
-# python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 5
+python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 5
 
-# python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 10
+python main.py --config_path ./config/fedlc.json --dataset_name cifar10 --partition_method sharding --partition_s 10
 
-# python main.py --config_path ./config/fedlc.json --dataset_name cifar100 --partition_method sharding --partition_s 10
+python main.py --config_path ./config/fedlc.json --dataset_name cifar100 --partition_method sharding --partition_s 10
 
 python main.py --config_path ./config/fedlc.json --dataset_name cifar100 --partition_method sharding --partition_s 50
 
