@@ -47,7 +47,7 @@ def _data_transforms_cifar10():
     train_transform.transforms.append(Cutout(16))
 
     valid_transform = transforms.Compose(
-        [transforms.ToTensor(), transforms.Normalize(MNIST_MEAN, MNIST_STD),]
+        [transforms.ToPILImage(), transforms.ToTensor(), transforms.Normalize(MNIST_MEAN, MNIST_STD),]
     )
 
     return train_transform, valid_transform
@@ -69,7 +69,6 @@ def get_dataloader_mnist(root, train=True, batch_size=50, dataidxs=None):
         dataloader = data.DataLoader(
             dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=5
         )
-        dataset.targets
 
     else:
         dataset = MNIST_truncated(

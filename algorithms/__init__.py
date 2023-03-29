@@ -7,3 +7,4 @@ from .fedrod import *
 from .moon import *
 from .scaffold import *
 from .fedavgm import *
+from .fedmbk import *

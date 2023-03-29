@@ -1,11 +1,12 @@
 {
     "data_setups":{
-        "root": "./data",
+        "root": "~/data",
         "dataset_name": "cifar10",
         "batch_size": 50,
         "n_clients": 100,
         "partition": {
-            "method": "sharding"
+            "method": "sharding",
+            "shard_per_user": 2
         }
     },
     "train_setups":{
@@ -34,7 +35,7 @@
         "seed": 2023
     },
     "wandb_setups":{
-        "project": "baseline",
+        "project": "baseline1",
         "group": "fedavg",
         "name": "fedavg"
     }

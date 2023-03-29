@@ -223,6 +223,12 @@ class BaseServer:
         test_acc = evaluate_model(self.model, self.testloader, device=self.device,)
         self.server_results["test_accuracy"].append(test_acc)
 
+        # Evaluate Personalized FL performance
+        eval_results = get_round_personalized_acc(
+            round_results, self.server_results, self.data_distributed
+        )
+        wandb.log(eval_results, step=round_idx)
+
         # Change learning rate
         if self.scheduler is not None:
             self.scheduler.step()

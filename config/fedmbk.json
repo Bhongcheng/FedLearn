@@ -1,6 +1,6 @@
 {
     "data_setups":{
-        "root": "./data",
+        "root": "~/data",
         "dataset_name": "cifar10",
         "batch_size": 50,
         "n_clients": 100,
@@ -10,8 +10,8 @@
     },
     "train_setups":{
         "algo": {
-            "name": "fedavgm",
-            "params": {"avgm_beta": 0.7}
+            "name": "fedmbk",
+            "params": {"tau": 1, "beta": 1}
         },
         "scenario": {
             "n_rounds": 200,
@@ -31,11 +31,11 @@
             "name": "step",
             "params": {"gamma":0.99, "step_size": 1}
         },
-        "seed": 2022
+        "seed": 2023
     },
     "wandb_setups":{
         "project": "baseline1",
-        "group": "fedavgm",
-        "name": "fedavgm"
+        "group": "fedmbk",
+        "name": "fedmbk"
     }
 }

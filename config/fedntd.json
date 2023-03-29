@@ -34,7 +34,7 @@
         "seed": 2023
     },
     "wandb_setups":{
-        "project": "baseline",
+        "project": "baseline1",
         "group": "fedntd",
         "name": "fedntd"
     }

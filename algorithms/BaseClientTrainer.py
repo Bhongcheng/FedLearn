@@ -35,12 +35,9 @@ class BaseClientTrainer:
         local_results["train_acc"] = evaluate_model(
             self.model, self.trainloader, self.device
         )
-        local_results["test_acc"] = evaluate_model(
-            self.model, self.testloader, self.device
+        local_results["classwise_accuracy"], local_results["test_acc"] = evaluate_model_classwise(
+            self.model, self.testloader, self.num_classes, device=self.device,
         )
-        # local_results["classwise_accuracy"], local_results["test_acc"] = evaluate_model_classwise(
-        #     self.model, self.testloader, self.num_classes, device=self.device,
-        # )
 
         return local_results
     
